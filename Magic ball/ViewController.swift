@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    let imageOptions = [#imageLiteral(resourceName: "Crazy"),#imageLiteral(resourceName: "Sure"),#imageLiteral(resourceName: "Risky"),#imageLiteral(resourceName: "NoWay")]
+    
+    @IBOutlet weak var ImageOnScreen: UIImageView!
+    
+    
+    @IBAction func askButtonPressed(_ sender: UIButton) {
+        
+        ImageOnScreen.image = imageOptions.randomElement()
     }
-
-
-}
-
+    
+    }
